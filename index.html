@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .image-gallery {
+        background-color: black;
+        height: 20%;
+        overflow-x: scroll;
+        white-space: nowrap;
+        overflow-y: hidden;
+        padding: 10px;
+      }
+
+      
+
+      .image-gallery img {
+        display: inline-block;
+        height: 100%;
+        margin-right: 10px;
+        border-radius: 5px;
+      }
+      .image-container img {
+        width: 250px;
+        height: 100px;
+      }
+      .image-container {
+        position: fixed;
+        top: -11px;
+        left: 0;
+        z-index: 9999;
+      }
+      .image-container-1 {
+        position: fixed;
+        top: 100px;
+        right: -10px;
+        
+        
+      }
+      .image-container-2 {
+        position: fixed;
+        top: 200px;
+        right: -10px;
+        
+      }
+      .image-container-3 {
+        position: fixed;
+        top: 300px;
+        right: -10px;
+        
+      }
+      .image-container-4 {
+        position: fixed;
+        top: 400px;
+        right: -10px;
+        
+      }
+      
+
+      .position{
+        position: absolute;
+        bottom: 8px;
+        left: 16px;
+      }
+
+      /* text over image */
+    </style>
+    <script>
+      function changeIframe(url) {
+        document.getElementById("myIframe").src = url;
+      }
+    </script>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="image-container">
+      <a href="projects.html"><img src="logo3.svg" alt="MetaSketch" "/></a>
+    </div>
+
+    <div class="image-container-1">
+        <!-- <a href="#"><img src="images/1.png" alt="MetaSketch" height="100px" width="100px" /></a> -->
+        <button data-modal-target="#modal"><img src="1.png" alt="info"></button>
+        <div class="modal" id="modal">
+          <div class="modal-header">
+            <div class="title">Example Modal</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!
+          </div>
+        </div>
+        <div id="overlay"></div>
+      </div>
+
+      <div class="image-container-2">
+        <a href="#"><img src="images/2.png" alt="MetaSketch" height="100px" width="100px"/></a>
+      </div>
+
+      <div class="image-container-3">
+        <a href="#"><img src="images/3.png" alt="MetaSketch" height="100px" width="100px"/></a>
+      </div>
+
+      <div class="image-container-4"  >
+        <a href="#"><img src="images/4.png" alt="MetaSketch" height="100px" width="100px"/></a>
+      </div>
+    
+    <div class="container">
+      <iframe
+        id="myIframe"
+        src=https://www.google.com/maps/embed?pb=!4v1688903941616!6m8!1m7!1sCAoSLEFGMVFpcFBHcmQ2SWREX2hoeDRwclJhU3lJMEpuOV9HUWRYQ05lSUhXSGdB!2m2!1d17.56125237928416!2d78.48916785400198!3f247.43041037713076!4f-2.5795812298880634!5f0.4000000000000002"
+        width="93.8%"
+        height="80%"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+
+      <div class="image-gallery">
+
+     
+        <img
+          class="image"
+          src="images/Main-Entrance.png"
+          alt="Main Entrance"
+          onclick="changeIframe('https://www.google.com/maps/embed?pb=!4v1688903941616!6m8!1m7!1sCAoSLEFGMVFpcFBHcmQ2SWREX2hoeDRwclJhU3lJMEpuOV9HUWRYQ05lSUhXSGdB!2m2!1d17.56125237928416!2d78.48916785400198!3f247.43041037713076!4f-2.5795812298880634!5f0.4000000000000002')"
+        />
+   
+        
+      
+        
+        
+
+        <img
+          class="image"
+          src="images\Drawing-Room.png"
+          alt="Drawing Room"
+          onclick="changeIframe('https://www.google.com/maps/embed?pb=!4v1688904839190!6m8!1m7!1sCAoSLEFGMVFpcE5hZUZXczJKQ2VJby1ob1FuYlNNc1diVzMza0V5eEFySkYtTXY1!2m2!1d17.56124478639456!2d78.48915077503347!3f153.20333123254989!4f-9.469743173698234!5f0.7820865974627469')"
+        />
+
+        <img
+          class="image"
+          src="images/Dining-Hall.png"
+          alt="Dining"
+          onclick="changeIframe('https://www.google.com/maps/embed?pb=!4v1688903259352!6m8!1m7!1sCAoSLEFGMVFpcFAtWXN5QU9IQzQwOFR0TXBoeUZkRFFQVTRaTnZ6dVgtNzl5dVFR!2m2!1d17.56123719350495!2d78.48913369606568!3f245.569510167708!4f-2.0285078068703655!5f0.4000000000000002')"
+        />
+
+        <img
+          class="image"
+          src="images\Kitchen.png"
+          alt="Kitchen"
+          onclick="changeIframe('https://www.google.com/maps/embed?pb=!4v1688903543206!6m8!1m7!1sCAoSLEFGMVFpcE1vVlRVRHNuODdnSFUtRXhEOEg3WW9DSFQtUUMwT1hDTURFM21K!2m2!1d17.56122552412211!2d78.48915382882953!3f95.7560984115085!4f-7.619143109200138!5f0.4000000000000002')"
+        />
+
+        <img
+          class="image"
+          src="images/Living-Room.png"
+          alt="Living Room"
+          onclick="changeIframe('https://www.google.com/maps/embed?pb=!4v1688903742581!6m8!1m7!1sCAoSLEFGMVFpcE4tUTQ4cXNVQXZGVHBBdmNBZlJfTER2TDFaSXhjM2o4TVk2Z1BR!2m2!1d17.5612325301717!2d78.4891154796749!3f168.13025283082214!4f-5.077247570756697!5f0.4000000000000002')"
+        />
+
+        <img
+          class="image"
+          src="images\Master-Bed-Room.png"
+          alt="Master Bed Room"
+          onclick="changeIframe('https://www.google.com/maps/embed?pb=!4v1688904289445!6m8!1m7!1sCAoSLEFGMVFpcFAtTTAyeFA0QjFsdkxQSHZWUkpaVWtjemdabVlSbXJyTVVEanRi!2m2!1d17.56121240149332!2d78.48911874303336!3f207.15854503661512!4f-7.628190847452984!5f0.5248946779190679')"
+        />
+
+        <img
+          class="image"
+          src="images/Bed-Room-1.png"
+          alt="Bed Room 1"
+          onclick="changeIframe('https://www.google.com/maps/embed?pb=!4v1688904416642!6m8!1m7!1sCAoSLEFGMVFpcE1La1o2WlFFbENHOVVWWWE0cVp1YXhjb0tBWkNicXZHVUJtREZI!2m2!1d17.56125721699058!2d78.48913802482097!3f39.716947677431236!4f-11.060340283915266!5f0.4000000000000002')"
+        />
+
+        <img
+          class="image"
+          src="images\Bed-Room-2.png"
+          alt="Bed Room 2"
+          onclick="changeIframe('https://www.google.com/maps/embed?pb=!4v1688904686987!6m8!1m7!1sCAoSLEFGMVFpcE05SVNGemRaMHRnbl9kOU9maEQteC12blFvM0xPM1d1UnB6emQ3!2m2!1d17.56124914133773!2d78.48910152856683!3f289.7233804399147!4f-5.611011066941842!5f0.4000000000000002')"
+        />
+
+        <img
+          class="image"
+          src="images/Balcony.png"
+          alt="Balcony"
+          onclick="changeIframe('https://www.google.com/maps/embed?pb=!4v1688904729045!6m8!1m7!1sCAoSLEFGMVFpcE05SVNGemRaMHRnbl9kOU9maEQteC12blFvM0xPM1d1UnB6emQ3!2m2!1d17.56124914133773!2d78.48910152856683!3f125.39020481463898!4f-16.967592662024657!5f0.4000000000000002')"
+        />
+
+      </div>
+    </div>
+  </body>
+</html>
